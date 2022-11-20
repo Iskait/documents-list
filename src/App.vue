@@ -2,7 +2,7 @@
 import { provide, ref } from "vue";
 import Document from "@/components/Document.vue";
 import DocumentStash from "@/components/DocumentStash.vue";
-import { Category, CategoryDocument } from "./types/Documents";
+import { Category, CategoryDocument } from "@/types/Documents";
 import BookMark from "@/assets/book-mark.svg?component";
 import PlusSign from "@/assets/plus-sign.svg?component";
 import SearchIcon from "@/assets/search-icon.svg?component";

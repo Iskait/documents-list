@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import { ComputedRef, inject, Ref, ref } from "vue";
+import { Category, CategoryDocument } from "@/types/Documents";
 import Edit from "@/assets/edit.svg?component";
 import Move from "@/assets/move.svg?component";
 import Trash from "@/assets/trash.svg?component";
-import { ComputedRef, inject, Ref, ref } from "vue";
-import { Category, CategoryDocument } from "../types/Documents";
 
 const props = defineProps<{
   /** Название */

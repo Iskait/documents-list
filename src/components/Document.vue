@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, inject, provide, Ref, ref, watch } from "vue";
-import DocumentItem from "./DocumentItem.vue";
-import { Category, CategoryDocument } from "../types/Documents";
-import vAccordion from "../directives/vAccordion";
+import DocumentItem from "@/components/DocumentItem.vue";
+import { Category, CategoryDocument } from "@/types/Documents";
+import vAccordion from "@/directives/vAccordion";
 import Arrow from "@/assets/arrow.svg?component";
 import Edit from "@/assets/edit.svg?component";
 import Move from "@/assets/move.svg?component";
