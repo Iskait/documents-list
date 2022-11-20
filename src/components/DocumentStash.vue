@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { inject, Ref } from "vue";
-import { Category, CategoryDocument } from "../types/Documents";
-import DocumentItem from "./DocumentItem.vue";
+import { Category, CategoryDocument } from "@/types/Documents";
+import DocumentItem from "@/components/DocumentItem.vue";
 
 /** Инъекция всех данных */
 const documents = inject("documents") as Ref<Category[]>;
