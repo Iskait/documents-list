@@ -154,7 +154,7 @@ const onDrop = (event: DragEvent, id: number) => {
 <template>
   <div
     class="ml-4 flex items-center justify-between border p-4 transition-all"
-    :class="{ 'border-t-4 border-t-blue-800': dragEnter }"
+    :class="{ 'bg-slate-400/30': dragEnter }"
     :draggable="draggable"
     @dragstart="dragStart($event, id)"
     @drop.prevent="onDrop($event, id), (dragEnter = false)"

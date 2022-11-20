@@ -2,6 +2,7 @@
 import { computed, inject, provide, Ref, ref, watch } from "vue";
 import DocumentItem from "./DocumentItem.vue";
 import { Category, CategoryDocument } from "../types/Documents";
+import vAccordion from "../directives/vAccordion";
 import Arrow from "@/assets/arrow.svg?component";
 import Edit from "@/assets/edit.svg?component";
 import Move from "@/assets/move.svg?component";
@@ -154,22 +155,21 @@ watch(search, (newValue) => {
         />
       </div>
     </div>
-    <div
+    <transition-group
+      name="list"
+      tag="div"
       class="origin-top transition-all duration-500"
-      :class="[
-        showDocuments ? 'max-h-screen scale-y-100' : 'max-h-0 scale-y-0',
-      ]"
+      :class="[showDocuments ? 'scale-y-100' : 'scale-y-0']"
+      v-accordion="showDocuments"
     >
-      <transition-group name="list" tag="div">
-        <DocumentItem
-          v-for="item in items"
-          :key="item.id"
-          :title="item.title"
-          :description="item.description"
-          :id="item.id"
-          :is-in-stash="false"
-        />
-      </transition-group>
-    </div>
+      <DocumentItem
+        v-for="item in items"
+        :key="item.id"
+        :title="item.title"
+        :description="item.description"
+        :id="item.id"
+        :is-in-stash="false"
+      />
+    </transition-group>
   </div>
 </template>
